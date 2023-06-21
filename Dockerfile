@@ -8,7 +8,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn package -DskipTests
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:11-jdk-slim
 
 EXPOSE 8080
 
