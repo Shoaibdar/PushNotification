@@ -17,6 +17,11 @@ public class NotificationController {
 	static String postUrl = "https://fcm.googleapis.com/fcm/send";
 	//static String token = "dTgMt10wFr-gL2YDjeTjVA:APA91bG8SM2VW3qPFkrMR3mq4xkIfFdnx-TWT0WhfcJVp7cHeX9O8j0qUnHY9FNE8wYDNCM6d7wMbtei7ZXYQI6vE5T_WaC1zpuNZpeiC5-ZzFpKfaeRjkZuL9uae8dvDnicrCtoawsx";
 
+	@GetMapping("/test)
+	public String test() {
+		return "working...";
+	}
+	
 	@GetMapping("/send{token}/{fcmServerKey}")
 	public void sendNotification(@PathVariable String token, @PathVariable String fcmServerKey) {
 
