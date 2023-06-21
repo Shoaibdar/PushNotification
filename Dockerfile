@@ -12,6 +12,6 @@ FROM openjdk:11-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=build /app/target/fcm-test.jar app.jar
+COPY --from=build /build/libs/fcm-test.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
